@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\CFG">
+      <UniqueIdentifier>{0fd7d07c-64a5-47b5-9e83-be6695f74345}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CFG">
+      <UniqueIdentifier>{d222fb51-2fc7-47f1-951b-a800fe942d4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ABIN">
+      <UniqueIdentifier>{a357755d-b4e6-4c89-b6e5-67a1e43e0477}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ABIN">
+      <UniqueIdentifier>{1e81ba94-ed69-4ac0-87fa-9d5c0ff48d3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Global">
+      <UniqueIdentifier>{f473c967-345d-45e3-b1dd-2c17d8273eec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Global">
+      <UniqueIdentifier>{85b2af19-c581-4f97-9229-9fe6d1ac70c5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="block.cpp">
+      <Filter>Source Files\CFG</Filter>
+    </ClCompile>
+    <ClCompile Include="FGD.cpp">
+      <Filter>Source Files\CFG</Filter>
+    </ClCompile>
+    <ClCompile Include="lable.cpp">
+      <Filter>Source Files\CFG</Filter>
+    </ClCompile>
+    <ClCompile Include="instruction.cpp">
+      <Filter>Source Files\CFG</Filter>
+    </ClCompile>
+    <ClCompile Include="Words\StringHash.cpp">
+      <Filter>Source Files\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="stringCalculator.cpp">
+      <Filter>Source Files\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>Source Files\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="Abstract_interpretation.cpp">
+      <Filter>Source Files\ABIN</Filter>
+    </ClCompile>
+    <ClCompile Include="ENV.cpp">
+      <Filter>Source Files\ABIN</Filter>
+    </ClCompile>
+    <ClCompile Include="OPcodeSimulatetion.cpp">
+      <Filter>Source Files\ABIN</Filter>
+    </ClCompile>
+    <ClCompile Include="Range.cpp">
+      <Filter>Source Files\ABIN</Filter>
+    </ClCompile>
+    <ClCompile Include="Range_Analysis.cpp">
+      <Filter>Source Files\ABIN</Filter>
+    </ClCompile>
+    <ClCompile Include="Variable.cpp">
+      <Filter>Source Files\ABIN</Filter>
+    </ClCompile>
+    <ClCompile Include="codepair.cpp">
+      <Filter>Source Files\CFG</Filter>
+    </ClCompile>
+    <ClCompile Include="IMDLLS.cpp">
+      <Filter>Source Files\CFG</Filter>
+    </ClCompile>
+    <ClCompile Include="Register.cpp">
+      <Filter>Source Files\CFG</Filter>
+    </ClCompile>
+    <ClCompile Include="Valriables.cpp">
+      <Filter>Source Files\CFG</Filter>
+    </ClCompile>
+    <ClCompile Include="State.cpp">
+      <Filter>Source Files\ABIN</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="HEADERS\BeaEngine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Disassemble.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FileDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="block.h">
+      <Filter>Header Files\CFG</Filter>
+    </ClInclude>
+    <ClInclude Include="codepair.h">
+      <Filter>Header Files\CFG</Filter>
+    </ClInclude>
+    <ClInclude Include="FGD.h">
+      <Filter>Header Files\CFG</Filter>
+    </ClInclude>
+    <ClInclude Include="instruction.h">
+      <Filter>Header Files\CFG</Filter>
+    </ClInclude>
+    <ClInclude Include="lable.h">
+      <Filter>Header Files\CFG</Filter>
+    </ClInclude>
+    <ClInclude Include="stringCalculator.h">
+      <Filter>Header Files\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="Abstract_interpretation.h">
+      <Filter>Header Files\ABIN</Filter>
+    </ClInclude>
+    <ClInclude Include="ENV.h">
+      <Filter>Header Files\ABIN</Filter>
+    </ClInclude>
+    <ClInclude Include="OPcodeSimulatetion.h">
+      <Filter>Header Files\ABIN</Filter>
+    </ClInclude>
+    <ClInclude Include="Range.h">
+      <Filter>Header Files\ABIN</Filter>
+    </ClInclude>
+    <ClInclude Include="Range_Analysis.h">
+      <Filter>Header Files\ABIN</Filter>
+    </ClInclude>
+    <ClInclude Include="State.h">
+      <Filter>Header Files\ABIN</Filter>
+    </ClInclude>
+    <ClInclude Include="Variable.h">
+      <Filter>Header Files\ABIN</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>Header Files\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="IMDLLS.h">
+      <Filter>Header Files\CFG</Filter>
+    </ClInclude>
+    <ClInclude Include="Register.h">
+      <Filter>Header Files\CFG</Filter>
+    </ClInclude>
+    <ClInclude Include="Valriables.h">
+      <Filter>Header Files\CFG</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cursor_select.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="head.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="DLL\BeaEngine.dll" />
+    <None Include="About.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="header.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="favicon.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resources.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="DLL\BeaEngine.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="..\Debug\Compiler_Project_1.manifest" />
+    <Manifest Include="Compiler_Project_1.exe.manifest" />
+  </ItemGroup>
+</Project>

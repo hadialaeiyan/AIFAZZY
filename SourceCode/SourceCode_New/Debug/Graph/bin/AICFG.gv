@@ -1,0 +1,69 @@
+digraph G {
+graph [
+rankdir = "TB"
+center = "true"
+];
+node [
+fontsize = "16"
+shape = "box"
+];
+edge [
+color = "blue"
+];
+
+"node0" [
+label = "<f0>BB0|<f1>|<f2> IN : |<f3> OUT : \nBB0_1"
+shape = "Mrecord",color = "red"
+];
+
+"node0_1" [
+label = "<f0>BB0_1|<f1>1	00401000: push eax 		Def : [esp, ] used : [eax, esp, ]\n|<f2> IN : \nBB0|<f3> OUT : \nBB0_2"
+shape = "Mrecord"
+];
+
+"node0_2" [
+label = "<f0>BB0_2|<f1>2	00401001: mov eax , 00000005h 		Def : [eax, ] used : []\n|<f2> IN : \nBB0_1|<f3> OUT : \nJunction1"
+shape = "Mrecord"
+];
+
+"nodenction1" [
+label = "<f0>Junction1|<f1>|<f2> IN : \nBB2_1\nBB0_2|<f3> OUT : \nBB3_1"
+shape = "Mrecord"
+];
+
+"node3_1" [
+label = "<f0>BB3_1|<f1>3	00401006: test eax , 00000064h  ;@j jnl		Def : [eax, ] used : []\n|<f2> IN : \nJunction1|<f3> OUT : \nBB2_1\nBB1_1"
+shape = "Mrecord"
+];
+
+"node2_1" [
+label = "<f0>BB2_1|<f1>5	0040100D: add eax , 01h  ;eax=00000006		Def : [eax, ] used : [eax, ]\n|<f2> IN : \nBB3_1|<f3> OUT : \nJunction1"
+shape = "Mrecord"
+];
+
+node2_1 -> nodenction1 [layer = "all", label = "jumping\n#V = 0 #R = 13 #S = 1\nstack:[0,0]\nregisters:\n   is, [0,0]\n   ia, [0,0]\n   z, [0,0]\n   d, [0,0]\n   o, [0,0]\n   u, [0,0]\n   p, [0,0]\n   af, [0,0]\n   cf, [0,0]\n   rax, eax, ax, ah, al, [6,100]\n   rbx, ebx, bx, bh, bl, [0,0]\n   rcx, ecx, cx, ch, cl, [0,0]\n   rdx, edx, dx, dh, dl, [0,0]"];
+"node1_1" [
+label = "<f0>BB1_1|<f1>7	00401012: pop eax  ;00401000		Def : [eax, ] used : []\n|<f2> IN : \nBB3_1|<f3> OUT : \nBB1_492"
+shape = "Mrecord"
+];
+
+"node1_492" [
+label = "<f0>BB1_492|<f1>498	004013E7: ??? 		Def : [] used : []\n|<f2> IN : \nBB1_1|<f3> OUT : \nexit1"
+shape = "Mrecord"
+];
+
+"nodeit1" [
+label = "<f0>exit1|<f1>|<f2> IN : \nBB1_492|<f3> OUT : "
+shape = "Mrecord",color = "peru"
+];
+
+node1_492 -> nodeit1 [layer = "all", label = "countinue\n#V = 0 #R = 13 #S = 0\nregisters:\n   is, [0,0]\n   ia, [0,0]\n   z, [0,0]\n   d, [0,0]\n   o, [0,0]\n   u, [0,0]\n   p, [0,0]\n   af, [0,0]\n   cf, [0,0]\n   rax, eax, ax, ah, al, [0,0]\n   rbx, ebx, bx, bh, bl, [0,0]\n   rcx, ecx, cx, ch, cl, [0,0]\n   rdx, edx, dx, dh, dl, [0,0]"];
+node1_1 -> node1_492 [layer = "all", label = "continue\n#V = 0 #R = 13 #S = 0\nregisters:\n   is, [0,0]\n   ia, [0,0]\n   z, [0,0]\n   d, [0,0]\n   o, [0,0]\n   u, [0,0]\n   p, [0,0]\n   af, [0,0]\n   cf, [0,0]\n   rax, eax, ax, ah, al, [0,0]\n   rbx, ebx, bx, bh, bl, [0,0]\n   rcx, ecx, cx, ch, cl, [0,0]\n   rdx, edx, dx, dh, dl, [0,0]"];
+node3_1 -> node2_1 [layer = "all", label = "false\n#V = 0 #R = 13 #S = 1\nstack:[0,0]\nregisters:\n   is, [0,0]\n   ia, [0,0]\n   z, [0,0]\n   d, [0,0]\n   o, [0,0]\n   u, [0,0]\n   p, [0,0]\n   af, [0,0]\n   cf, [0,0]\n   rax, eax, ax, ah, al, [5,99]\n   rbx, ebx, bx, bh, bl, [0,0]\n   rcx, ecx, cx, ch, cl, [0,0]\n   rdx, edx, dx, dh, dl, [0,0]"];
+node3_1 -> node1_1 [layer = "all", label = "true\n#V = 0 #R = 13 #S = 1\nstack:[0,0]\nregisters:\n   is, [0,0]\n   ia, [0,0]\n   z, [0,0]\n   d, [0,0]\n   o, [0,0]\n   u, [0,0]\n   p, [0,0]\n   af, [0,0]\n   cf, [0,0]\n   rax, eax, ax, ah, al, [100,100]\n   rbx, ebx, bx, bh, bl, [0,0]\n   rcx, ecx, cx, ch, cl, [0,0]\n   rdx, edx, dx, dh, dl, [0,0]"];
+nodenction1 -> node3_1 [layer = "all", label = "continue\n#V = 0 #R = 13 #S = 1\nstack:[0,0]\nregisters:\n   is, [0,0]\n   ia, [0,0]\n   z, [0,0]\n   d, [0,0]\n   o, [0,0]\n   u, [0,0]\n   p, [0,0]\n   af, [0,0]\n   cf, [0,0]\n   rax, eax, ax, ah, al, [5,100]\n   rbx, ebx, bx, bh, bl, [0,0]\n   rcx, ecx, cx, ch, cl, [0,0]\n   rdx, edx, dx, dh, dl, [0,0]"];
+node0_2 -> nodenction1 [layer = "all", label = "continue\n#V = 0 #R = 13 #S = 1\nstack:[0,0]\nregisters:\n   is, [0,0]\n   ia, [0,0]\n   z, [0,0]\n   d, [0,0]\n   o, [0,0]\n   u, [0,0]\n   p, [0,0]\n   af, [0,0]\n   cf, [0,0]\n   rax, eax, ax, ah, al, [5,5]\n   rbx, ebx, bx, bh, bl, [0,0]\n   rcx, ecx, cx, ch, cl, [0,0]\n   rdx, edx, dx, dh, dl, [0,0]"];
+node0_1 -> node0_2 [layer = "all", label = "continue\n#V = 0 #R = 13 #S = 1\nstack:[0,0]\nregisters:\n   is, [0,0]\n   ia, [0,0]\n   z, [0,0]\n   d, [0,0]\n   o, [0,0]\n   u, [0,0]\n   p, [0,0]\n   af, [0,0]\n   cf, [0,0]\n   rax, eax, ax, ah, al, [0,0]\n   rbx, ebx, bx, bh, bl, [0,0]\n   rcx, ecx, cx, ch, cl, [0,0]\n   rdx, edx, dx, dh, dl, [0,0]"];
+node0 -> node0_1 [layer = "all", label = "continue\n#V = 0 #R = 13 #S = 0\nregisters:\n   is, [0,0]\n   ia, [0,0]\n   z, [0,0]\n   d, [0,0]\n   o, [0,0]\n   u, [0,0]\n   p, [0,0]\n   af, [0,0]\n   cf, [0,0]\n   rax, eax, ax, ah, al, [0,0]\n   rbx, ebx, bx, bh, bl, [0,0]\n   rcx, ecx, cx, ch, cl, [0,0]\n   rdx, edx, dx, dh, dl, [0,0]"];
+
+}
